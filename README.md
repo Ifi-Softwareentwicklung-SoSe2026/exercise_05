@@ -35,7 +35,7 @@ damit ich meine Prognosen für die Spiele dokumentieren und Wetten mit Quoten ve
 ### Akzeptanzkriterien
 
 Turnierstruktur
-====================
+--------------------
 
 - Das System modelliert die Gruppenphase der Fußball-Weltmeisterschaft.
 - Jede Gruppe enthält Mannschaften (Klasse Mannschaft mit Name).
@@ -48,7 +48,7 @@ Turnierstruktur
 
 
 Wettfunktionalität
-====================
+--------------------
 
 - Jedes Spiel kann Wettquoten für verschiedene Wett-Typen speichern (z. B. Siegwette, Ergebniswette).
 - Eine Wette (Klasse Wette) besteht aus:
@@ -59,13 +59,13 @@ Wettfunktionalität
     - Einem Einsatz (Geldbetrag).
 
 Datenpersistenz
-====================
+--------------------
 
 - Die Turniertabelle (Spiele und Mannschaften) muss in einer Datei gespeichert und geladen werden können (z. B. JSON).
 - Wetten und Quoten werden ebenfalls persistent gespeichert.
 
 Benutzerinteraktion (Konsolenanwendung)
-====================
+--------------------
 
 Das System wird über Command-Line-Parameter gesteuert:
 
@@ -79,21 +79,25 @@ Das System wird über Command-Line-Parameter gesteuert:
 
 ### Stufenweise Implementierung
 
+Design und Implementierung soll jeweils in einem Branch stattfinden.
+Jede Stufe soll funktional sein und die vorherige Stufe erweitern.
+Die Stufen sollen einzeln in main gemerged werden, damit die Funktionalität schrittweise erweitert wird.
+
 Stufe 1 (Grundlage):
-====================
+--------------------
 
 - Modellierung der Turniertabelle (Mannschaften und Spiele).
 - Speichern/Laden der Turnierdaten.
 - `new` und `print` Befehle implementieren.
 
 Stufe 2 (Erweitert):
-====================
+--------------------
 
 - Hinzufügen von Wettquoten für Spiele.
 - `set` und `get` Befehle implementieren.
 
 Stufe 3 (Fortgeschritten):
-====================
+--------------------
 
 - Platzieren von Wetten durch Benutzer (`bid`-Befehl).
 - Verwaltung von Benutzer-Guthaben.
