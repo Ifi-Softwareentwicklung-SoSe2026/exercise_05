@@ -2,7 +2,7 @@
 
 author:   Volker Göhler
 email:    volker.goehler@informatik.tu-freiberg.de
-version:  0.0.2
+version:  0.0.3
 language: de
 narrator: Deutsch Female
 
@@ -53,10 +53,10 @@ Wettfunktionalität
 - Jedes Spiel kann Wettquoten für verschiedene Wett-Typen speichern (z. B. Siegwette, Ergebniswette).
 - Eine Wette (Klasse Wette) besteht aus:
 
-    - Einem Benutzer (Klasse Benutzer mit Name und Guthaben).
-    - Einem Wett-Typ (z. B. Siegwette, Ergebniswette).
-    - Einer Quote (z. B. 1.80, 3.50).
-    - Einem Einsatz (Geldbetrag).
+   - Einem Benutzer (Klasse Benutzer mit Name und Guthaben).
+   - Einem Wett-Typ (z. B. Siegwette, Ergebniswette).
+   - Einer Quote (z. B. 1.80, 3.50).
+   - Einem Einsatz (Geldbetrag).
 
 Datenpersistenz
 --------------------
@@ -108,10 +108,17 @@ Stufe 3 (Fortgeschritten):
 
 Ergänzen Sie im folgenden PlantUML-Block Ihre Lösung.
 
+- [plantUml Editor](https://pantuml.com)
+- paste and copy your code! Mit Reloads verlieren Sie Ihre Eingaben, daher vorher sichern!
+
 ```text @plantUML
 @startuml
 
-Arbeiten Sie hier !!!
+class Arbeiten_Sie_hier{
+    + have: string
+    ~ fun: string
+    - coding: string
+}
 
 @enduml
 ```
