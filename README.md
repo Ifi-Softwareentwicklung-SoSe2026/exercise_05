@@ -2,7 +2,7 @@
 
 author:   Volker Göhler
 email:    volker.goehler@informatik.tu-freiberg.de
-version:  0.0.1
+version:  0.0.2
 language: de
 narrator: Deutsch Female
 
@@ -28,8 +28,77 @@ Softwareentwicklung SoSe2026
 
 ## User Story
 
-Als Studierende:r möchte ich eine User Story als UML-Diagramm modellieren,
-damit Anforderungen strukturiert und nachvollziehbar dokumentiert werden.
+Als Benutzer eines Fußball-Wettannahmesystems
+möchte ich Wetten auf die Spiele der Fußball-Weltmeisterschaft (inkl. Gruppenphase) abgeben und verwalten,
+damit ich meine Prognosen für die Spiele dokumentieren und Wetten mit Quoten versehen kann.
+
+### Akzeptanzkriterien
+
+Turnierstruktur
+====================
+
+- Das System modelliert die Gruppenphase der Fußball-Weltmeisterschaft.
+- Jede Gruppe enthält Mannschaften (Klasse Mannschaft mit Name).
+- Jedes Spiel (Klasse Spiel) hat:
+
+   - Zwei Mannschaften (Heim und Auswärts).
+   - Ein Datum und eine Uhrzeit.
+   - Ein Ergebnis (initial leer).
+   - Eine eindeutige Spiel-ID.
+
+
+Wettfunktionalität
+====================
+
+- Jedes Spiel kann Wettquoten für verschiedene Wett-Typen speichern (z. B. Siegwette, Ergebniswette).
+- Eine Wette (Klasse Wette) besteht aus:
+
+    - Einem Benutzer (Klasse Benutzer mit Name und Guthaben).
+    - Einem Wett-Typ (z. B. Siegwette, Ergebniswette).
+    - Einer Quote (z. B. 1.80, 3.50).
+    - Einem Einsatz (Geldbetrag).
+
+Datenpersistenz
+====================
+
+- Die Turniertabelle (Spiele und Mannschaften) muss in einer Datei gespeichert und geladen werden können (z. B. JSON).
+- Wetten und Quoten werden ebenfalls persistent gespeichert.
+
+Benutzerinteraktion (Konsolenanwendung)
+====================
+
+Das System wird über Command-Line-Parameter gesteuert:
+
+- `new`: Initialisiert die Turniertabelle (statisch, da das Turnier vorgegeben ist).
+- `print`: Gibt alle Spiele der Tabelle mit ihren IDs aus.
+- `set <spielid> <Wetttyp> <Wettquote>`: Setzt eine Wettquote für ein Spiel und einen Wett-Typ.
+- `get <spielid> <Wetttyp>`: Gibt die aktuelle Wettquote für ein Spiel und einen Wett-Typ aus.
+- `bid <player> <spielid> <Wetttyp> <amount>`: Platziert eine Wette für einen Benutzer.
+- `result <spielid> <Tore-1.Mannschaft>:<Tore-2.Mannschaft>`: Trägt das Spielergebnis ein und löst die Auswertung der Wetten aus.
+
+
+### Stufenweise Implementierung
+
+Stufe 1 (Grundlage):
+====================
+
+- Modellierung der Turniertabelle (Mannschaften und Spiele).
+- Speichern/Laden der Turnierdaten.
+- `new` und `print` Befehle implementieren.
+
+Stufe 2 (Erweitert):
+====================
+
+- Hinzufügen von Wettquoten für Spiele.
+- `set` und `get` Befehle implementieren.
+
+Stufe 3 (Fortgeschritten):
+====================
+
+- Platzieren von Wetten durch Benutzer (`bid`-Befehl).
+- Verwaltung von Benutzer-Guthaben.
+- Eingabe von Spielergebnissen und Auswertung der Wetten (`result`-Befehl).
+
 
 ## Aufgabe: PlantUML-Antwortfeld
 
@@ -42,4 +111,3 @@ Arbeiten Sie hier !!!
 
 @enduml
 ```
-@plantUML.eval(png)
