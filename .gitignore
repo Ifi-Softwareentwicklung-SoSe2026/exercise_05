@@ -71,3 +71,4 @@ bin/
 obj/
 *.csv
 *.json
+!.github/classroom-agent.json

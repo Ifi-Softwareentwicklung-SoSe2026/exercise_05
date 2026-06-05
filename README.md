@@ -83,6 +83,14 @@ Design und Implementierung soll jeweils in einem Branch stattfinden.
 Jede Stufe soll funktional sein und die vorherige Stufe erweitern.
 Die Stufen sollen einzeln in main gemerged werden, damit die Funktionalität schrittweise erweitert wird.
 
+## Agent-Workflow
+
+Erstellen Sie zu Beginn ein GitHub-Issue, in dem Sie Kevin bitten, aus dieser User Story ein PlantUML-Klassendiagramm zu erstellen.
+
+Kevin arbeitet auf einem eigenen Branch, aktualisiert die `README.md` und erstellt eine Pull Request nach `main`. Kevin soll dabei auch den LiaScript-Course-Link auf Ihr studentisches Repository anpassen.
+
+Reviewen Sie Kevins Pull Request. Lisa reviewed denselben Pull Request automatisch. Kevin arbeitet Feedback erst ein, wenn für denselben PR-Stand sowohl Ihr Review als auch Lisas Review vorliegen. Der Pull Request wird erst gemerged, wenn beide Reviews genehmigt sind.
+
 Stufe 1 (Grundlage):
 --------------------
 
@@ -106,19 +114,9 @@ Stufe 3 (Fortgeschritten):
 
 ## Aufgabe: PlantUML-Antwortfeld
 
-Ergänzen Sie im folgenden PlantUML-Block Ihre Lösung.
+Kevin ersetzt den folgenden Platzhalter mit einem LiaScript-kompatiblen PlantUML-Block. Der erzeugte Block enthält `@plantUML.eval(png)`, damit LiaScript das Diagramm rendert.
 
 - [plantUml Editor](https://pantuml.com)
 - paste and copy your code! Mit Reloads verlieren Sie Ihre Eingaben, daher vorher sichern!
 
-```text @plantUML
-@startuml
-
-class Arbeiten_Sie_hier{
-    + have: string
-    ~ fun: string
-    - coding: string
-}
-
-@enduml
-```
+<!-- kevin:uml-diagram -->
