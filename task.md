@@ -1,27 +1,15 @@
-# Part 1 -- UML Class Diagram
+# Part 1 -- UML Class Diagram aus Issues
 
-- Im Ordner `robots_exercise` liegt ein CSharp .NET 10 Programm welches die Funktionalität von Robotern simuliert.
-- Stelle zu Dokumentationszwecken ein UML Klassendiagramm auf.
-- Nutze zur Entwicklung PlantUML (Editor: https://www.plantuml.com/plantuml/uml/).
-- Hilfestellung für die Erstellung eines UML Klassendiagramms: https://plantuml.com/class-diagram oder in der README.md Datei
-- Das PlantUML Klassendiagramm soll in der README.md Datei abgespeichert werden.
-- Achtung: Der Link in der LiaScript Datei zeigt auf das Template Repository, nicht auf ihr eigenes Repository. Bitte den Link entsprechend anpassen, oder direkt auf https://liascript.github.io die URL ihrer Datei eingeben zum rendern des Kurses.
-- Nutze einen eigenen branch dafür und erstelle einen Pull Request, damit die Änderungen in den main branch gemerged werden können.
+- in der `README.md` Datei ist eine Nutzerstory beschrieben, die in Form von Issues in GitHub beschrieben werden soll. Kevin (AI-Agent) wird die Issues bearbeiten und daraus ein UML Klassendiagramm erstellen, das die aktuelle Architektur des Programms beschreibt.
+- Das UML Klassendiagram wird in README.md dokumentiert.
+- Alle Commits sollen in einem eigenen Branch gemacht werden und ein Pull Request erstellt werden, damit die Änderungen in den `main` Branch gemerged werden können.
+- Die Studierenden sollen den PR prüfen, reviewen und Kevin anleiten, damit das UML Klassendiagramm die benötigte Struktur wiederspiegelt.
+- Der PR soll auch von Lisa (AI-Agent) geprüft und genehmigt werden, damit die Änderungen in den `main` Branch gemerged werden können.
 
-# Part 2 -- Rework the UML Class Diagram as Target Architecture
+# Part 2 -- Implement UML Class Diagram in CSharp
 
-- Überprüfe die aktuelle Funktionalität und Struktur des Programms im Ordner `robots_exercise`.
-- Identifiziere softwarearchitektonische Schwächen oder Verbesserungsmöglichkeiten, z. B. Verantwortlichkeiten, Kopplung, Erweiterbarkeit oder Wiederverwendung.
-- Entwirf daraus eine verbesserte Zielarchitektur als UML-Klassendiagramm.
-- Ändere dafür ausschließlich die Dokumentation in der `README.md` Datei.
-- Nimm in diesem Part noch keine Änderungen am CSharp-Code vor. Die Implementierung der Zielarchitektur erfolgt erst in Part 3.
-- Das UML-Diagramm darf daher bewusst von der aktuellen Code-Struktur abweichen, muss diese Abweichungen aber nachvollziehbar dokumentieren.
-- Dokumentiere zusätzlich kurz, welche Architekturänderungen vorgeschlagen werden und warum.
-- Alle Änderungen wiederum in einem eigenen Branch vornehmen und einen Pull Request erstellen, damit die Änderungen in den `main` Branch gemerged werden können.
-
-# Part 3 -- Implement the UML Class Diagram in CSharp
-
-- Implementiere alle Änderungen am CSharp Code.
-- Achte darauf, dass die Funktionalität des Programms erhalten bleibt.
-- Alle Änderungen müssen in einem eigenen branch vorgenommen werden und ein Pull Request erstellt werden, damit die Änderungen in den main branch gemerged werden können.
-
+- Das UML-Klassendiagramm, das in Part 1 erstellt wurde, liegt in der README.md Datei vor. Es ist unter der Überschrift "Aufgabe: PlantUML-Antwortfeld" zu finden
+- Alle Änderungen sollen in einem Branch gemacht werden, damit die Änderungen in einem Pull Request überprüft und genehmigt werden können.
+- Pull Requests sollen Stufenweise (siehe Stufenweise Implementierung in README.md) erstellt werden, damit die Änderungen in kleinen Schritten überprüft und genehmigt werden können.
+- Lisa (AI-Agent) wird die Pull Requests überprüfen und genehmigen.
+- Alle Anforderungen aus dem Klassendiagram und der User Story sollen beachtete werden.
