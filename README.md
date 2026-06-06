@@ -83,6 +83,23 @@ Design und Implementierung soll jeweils in einem Branch stattfinden.
 Jede Stufe soll funktional sein und die vorherige Stufe erweitern.
 Die Stufen sollen einzeln in main gemerged werden, damit die Funktionalität schrittweise erweitert wird.
 
+### Start eines C#-Projekts
+
+Legen Sie für die Implementierung ein eigenes .NET-Konsolenprojekt an. Ein möglicher Startpunkt ist:
+
+```bash
+mkdir betting_system
+dotnet new console --framework net10.0 --output betting_system
+dotnet restore betting_system/betting_system.csproj
+dotnet build betting_system/betting_system.csproj
+dotnet run --project betting_system/betting_system.csproj -- new
+```
+
+Arbeiten Sie danach nicht direkt auf `main`, sondern erstellen Sie für jeden Aufgabenteil einen eigenen Branch und öffnen Sie eine Pull Request nach `main`.
+
+**Wichtig für die automatische Auswertung (CI):**
+Erweitern Sie Ihre `Program.cs` so, dass bei einem Programmstart ohne Argumente (`dotnet run`) ein **automatisierter Testablauf** ausgeführt wird. Rufen Sie in diesem Fall programmgesteuert nacheinander die Befehle auf, die Sie bisher implementiert haben (z. B. Turnier initialisieren, eine Test-Quote setzen, eine Test-Wette platzieren, ein Ergebnis eintragen und am Ende die Tabellen und Wetten ausgeben). Der automatische `dotnet-build` Workflow führt `dotnet run` ohne Argumente aus und fängt diese Ausgabe ab, damit Lisa (AI-Agent) anhand der Konsolenausgabe prüfen kann, ob Ihre Logik fehlerfrei funktioniert.
+
 ## Agent-Workflow
 
 Erstellen Sie zu Beginn ein GitHub-Issue, in dem Sie Kevin bitten, aus dieser User Story ein PlantUML-Klassendiagramm zu erstellen.
